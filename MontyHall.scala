@@ -69,8 +69,7 @@ object MontyHall extends App {
     noChangeWins += simGame.doesNotChangeChoice()
       
     // Changes room
-    changeWins += simGame.changesChoice()
-  
+    changeWins += simGame.changesChoice()  
   }
   
   println("Runs: " + runs)
