@@ -42,8 +42,7 @@ object MontyHall extends App {
 
     def setChoices(): Unit = {
       this.rooms(rnd.nextInt(this.rooms.size)).setSelected
-      this.rooms(rnd.nextInt(this.rooms.size)).setPrize
-      
+      this.rooms(rnd.nextInt(this.rooms.size)).setPrize      
     }
 
   } //class GAME
@@ -61,8 +60,7 @@ object MontyHall extends App {
   
   var noChangeWins = 0
   var changeWins = 0
- 
-  
+   
   for (i <- 0 to runs) {
     simGame.resetGame()
     simGame.setChoices()
