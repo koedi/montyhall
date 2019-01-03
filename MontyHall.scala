@@ -71,6 +71,6 @@ object MontyHall extends App {
   }
   
   println("Runs: " + runs)
-  println("No change:\t" + 1.0*noChangeWins/runs + "\nChange:\t\t" + 1.0*changeWins/runs)
+  println("No change: " + 1.0*noChangeWins/runs + "\nChange:\t   " + 1.0*changeWins/runs)
 
 }
