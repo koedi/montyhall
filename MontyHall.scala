@@ -54,9 +54,7 @@ object MontyHall extends App {
    */
 
   var runs = 1000
-  var i = 0
-
-
+  
   val rnd = new scala.util.Random
   
   val simGame = new Game(Vector(new Room(1), new Room(2), new Room(3)))
@@ -65,7 +63,7 @@ object MontyHall extends App {
   var changeWins = 0
  
   
-  while ( i < runs) {
+  for (i <- 0 to runs) {
     simGame.resetGame()
     simGame.setChoices()
 
@@ -74,8 +72,7 @@ object MontyHall extends App {
       
     // Changes room
     changeWins += simGame.changesChoice()
-      
-    i += 1
+  
   }
   
   println("Runs: " + runs)
