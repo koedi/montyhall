@@ -3,9 +3,7 @@ object MontyHall extends App {
   class Room() {
     private var prize = false;
     private var selected = false;
-
-    override def toString() = { " Selected: " + this.selected + " Prize: " + this.prize }
-    
+      
     def setPrize: Unit = { this.prize = true }
     def isWin: Boolean = { this.prize }
 
@@ -36,20 +34,19 @@ object MontyHall extends App {
     }
     
     def setChoices(): Unit = {
-    this.rooms(rnd.nextInt(3)).setSelected
-    this.rooms(rnd.nextInt(3)).setPrize
-  }
-    
+      this.rooms(rnd.nextInt(3)).setSelected
+      this.rooms(rnd.nextInt(3)).setPrize
+    }
+   
   } //class GAME
   
 
   /**
-   * MONTY HALL SIMULATOR
+   * MAIN PART
    */
 
   var runs = 1000
   var i = 0
-
 
   val rnd = new scala.util.Random
   val simulatedGame = Vector(new Room(), new Room(), new Room())
@@ -75,7 +72,5 @@ object MontyHall extends App {
   
   println("Runs: " + runs)
   println("No change:\t" + 1.0*noChangeWins/runs + "\nChange:\t\t" + 1.0*changeWins/runs)
-  
-  
 
 }
