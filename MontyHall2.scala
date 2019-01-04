@@ -1,6 +1,6 @@
 object MontyHall extends App {
 
-  class Room(val id: Int) {
+  class Room() {
     private var prize = false;
     private var selected = false;
 
@@ -11,9 +11,6 @@ object MontyHall extends App {
     def isSelected: Boolean = { this.selected }
 
     def reset: Unit = { this.selected = false; this.prize = false }
-    
-    override def toString = "ID: "+ id +" S: " + this.selected + " P: " + this.prize + " "
-    
   } // class ROOM
 
   class Game(val rooms: Vector[MontyHall.Room]) {
@@ -52,7 +49,7 @@ object MontyHall extends App {
   var runs = 10000
   
   val rnd = new scala.util.Random
-  val simGame = new Game(Vector(new Room(1), new Room(2), new Room(3)))
+  val simGame = new Game(Vector(new Room(), new Room(), new Room()))
 
   var noChangeWins = 0
   var changeWins = 0
