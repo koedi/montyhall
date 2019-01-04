@@ -1,6 +1,9 @@
 # montyhall
 <pre>
-Monty Hall simulation implementation with Scala
+Three Monty Hall simulation implementations with Scala
+1) using pattern matching
+2) using collection functions (not 100% happy with this)
+3) quick and dirty
 
 Example outputs:
 
