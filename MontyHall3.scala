@@ -12,10 +12,10 @@
   var changeWins = 0
   var noChangeWins = 0
   
-  for ( i<- 0 to runs) {
+  for (i <- 0 to runs) {
     prize = rnd.nextInt(3)
     selected = rnd.nextInt(3)
-    tempChange +=    {if (prize == selected) 0 else 1}
+    tempChange   +=  {if (prize == selected) 0 else 1}
     tempNoChange +=  {if (prize == selected) 1 else 0}
   }
   
