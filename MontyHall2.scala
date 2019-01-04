@@ -27,25 +27,11 @@ object MontyHall extends App {
     }
 
     def changesChoice(): Int = {
-      /*
-      this.getSelectedRoom().hasPrize match {
-        case true  => 0
-        case false => 1
-      }
-			*/      
-      
        this.rooms.find(x => !x.isSelected && !x.hasPrize).get.setSelected
        bool2int(this.rooms.filter(!_.isSelected).head.hasPrize)
     }
 
     def doesNotChangeChoice(): Int = {
-      /*
-      this.getSelectedRoom().hasPrize match {
-        case true  => 1
-        case false => 0
-      }
-      */
-      
       bool2int(this.getSelectedRoom().hasPrize)
     }
 
